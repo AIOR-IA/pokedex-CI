@@ -1,4 +1,5 @@
 
+[![Deployment Pipeline](https://github.com/AIOR-IA/pokedex-CI/actions/workflows/pipeline.yml/badge.svg)](https://github.com/AIOR-IA/pokedex-CI/actions/workflows/pipeline.yml)
 
 # Full Stack open CI/CD
 
