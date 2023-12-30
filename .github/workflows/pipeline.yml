@@ -8,6 +8,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   deploy:
@@ -34,6 +37,7 @@ jobs:
           start: npm run start-test
           wait-on: http://localhost:5000
       - name: Deploy Vercel
+        if: ${{ github.event_name == 'push' }}
         run: npm install --global vercel@canary
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
