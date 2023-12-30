@@ -6,5 +6,6 @@ describe('Pokedex', function() {
     cy.contains('pikachu')
     cy.contains('Home').click()
     cy.contains('bulbasaur')
+    cy.contains('pikachu')
   })
 })
